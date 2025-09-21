@@ -1,0 +1,16 @@
+{
+  "name": "vscode-mcp-rag",
+  "version": "0.1.0",
+  "description": "Dummy MCP server for testing VS Code GitHub Copilot integrations with remote indexing data.",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "mcp-dummy-server": "src/server.js"
+  },
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
