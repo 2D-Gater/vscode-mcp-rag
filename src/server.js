@@ -87,6 +87,7 @@ function handleInitialize(message) {
 }
 
 function handleToolsList(message) {
+  log("tools/list 调用。");
   sendResponse(message.id, {
     tools: [
       {
@@ -121,6 +122,12 @@ function handleToolsCall(message) {
   const repoId = String(args.repository || "").toLowerCase();
   const topic = args.topic ? String(args.topic) : null;
 
+  log(
+    `fetchRepositoryContext 调用: repository=${args.repository ?? ""}${
+      topic ? `, topic=${topic}` : ""
+    }`
+  );
+
   const resource = RESOURCES.find((item) => item.uri.endsWith(repoId));
 
   let text;
@@ -144,6 +151,7 @@ function handleToolsCall(message) {
 }
 
 function handleResourcesList(message) {
+  log("resources/list 调用。");
   sendResponse(message.id, {
     resources: RESOURCES.map(({ uri, name, description, mimeType }) => ({
       uri,
@@ -157,6 +165,7 @@ function handleResourcesList(message) {
 
 function handleResourceGet(message) {
   const { uri } = message.params || {};
+  log(`resources/get 调用: uri=${uri ?? ""}`);
   const resource = RESOURCES.find((item) => item.uri === uri);
   if (!resource) {
     sendError(message.id, -32602, `Unknown resource: ${uri}`);
