@@ -24,7 +24,7 @@ const RESOURCES = [
     name: "Service A overview",
     description: "High level overview of the Service A code base used for integration tests.",
     mimeType: "text/markdown",
-    content: `# Service A\n\nThis is a mock service description used to verify MCP connectivity.\n\n- Language: TypeScript\n- Purpose: Handles user authentication\n- Important modules: \`auth/controller.ts\`, \`auth/service.ts\`\n` ,
+    content: `# Service A\n\nThis is a mock service description used to verify MCP connectivity.\n\n- Language: TypeScript\n- Purpose: Handles user authentication\n- Important modules: \`auth/controller.ts\`, \`auth/service.ts\`\n`,
   },
   {
     uri: "dummy://repo/service-b",
