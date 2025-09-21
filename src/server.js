@@ -151,7 +151,7 @@ function handleToolsCall(message) {
 }
 
 function handleResourcesList(message) {
-  log("resources/list 调用。");
+  log("resources/list called.");
   sendResponse(message.id, {
     resources: RESOURCES.map(({ uri, name, description, mimeType }) => ({
       uri,
