@@ -165,7 +165,7 @@ function handleResourcesList(message) {
 
 function handleResourceGet(message) {
   const { uri } = message.params || {};
-  log(`resources/get 调用: uri=${uri ?? ""}`);
+  log(`resources/get call: uri=${uri ?? ""}`);
   const resource = RESOURCES.find((item) => item.uri === uri);
   if (!resource) {
     sendError(message.id, -32602, `Unknown resource: ${uri}`);
