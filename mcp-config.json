@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "vsc-mcp-dummy": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "cwd": ".",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
+
