@@ -87,7 +87,7 @@ function handleInitialize(message) {
 }
 
 function handleToolsList(message) {
-  log("tools/list 调用。");
+  log("tools/list called.");
   sendResponse(message.id, {
     tools: [
       {
