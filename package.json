@@ -1,0 +1,28 @@
+{
+  "name": "vsc-mcp-dummy",
+  "version": "1.0.0",
+  "description": "MCP dummy server for Github Copilot Remote Indexing alternative",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "jest"
+  },
+  "keywords": ["mcp", "copilot", "indexing", "code-search"],
+  "author": "Your Team",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  }
+}
+
