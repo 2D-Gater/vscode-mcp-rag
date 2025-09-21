@@ -257,7 +257,7 @@ function processBuffer() {
       continue;
     }
 
-    const contentLength = Number.parseInt(lengthMatch[1], 10);
+    const contentLength = parseInt(lengthMatch[1], 10);
     const totalLength = headerEnd + 4 + contentLength;
     if (buffer.length < totalLength) {
       return;
